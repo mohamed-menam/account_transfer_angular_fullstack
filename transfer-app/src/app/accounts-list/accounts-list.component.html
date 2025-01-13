@@ -1,0 +1,22 @@
+<div *ngIf="accounts.length > 0">
+    <h2>Account List</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Account ID</th>
+                <th>Account Name</th>
+                <th>Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let account of accounts">
+                <td>{{ account.account_id }}</td>
+                <td>{{ account.name }}</td>
+                <td>{{ account.balance }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div *ngIf="accounts.length === 0">
+    <p>No accounts available.</p>
+</div>

@@ -1,0 +1,15 @@
+<div class="import-container">
+    <h2>Import Accounts</h2>
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="file">Select CSV File</label>
+            <input type="file" id="file" (change)="onFileChange($event)" />
+        </div>
+        <button type="submit" [disabled]="!selectedFile">Import</button>
+    </form>
+
+    <!-- Display Message -->
+    <div *ngIf="message" class="message">
+        {{ message }}
+    </div>
+</div>

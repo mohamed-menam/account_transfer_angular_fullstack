@@ -1,0 +1,10 @@
+<div *ngIf="account; else errorTemplate">
+    <h2>Account Details</h2>
+    <p><strong>Account Number:</strong> {{ account.account_number }}</p>
+    <p><strong>Balance:</strong> {{ account.balance }}</p>
+    <p><strong>Account Holder Name:</strong> {{ account.name }}</p>
+</div>
+
+<ng-template #errorTemplate>
+    <h2>{{ error }}</h2>
+</ng-template>
